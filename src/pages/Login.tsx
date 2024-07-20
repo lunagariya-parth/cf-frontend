@@ -1,4 +1,4 @@
-import { Form, Input } from 'antd'
+import { Flex, Form, Input } from 'antd'
 import { Button } from '../components/ant'
 import { Link } from 'react-router-dom'
 
@@ -30,15 +30,17 @@ function LogIn() {
         >
           <Input.Password placeholder="Enter Password" />
         </Form.Item>
-
+        <Flex justify='end'>
+          <Link className='link' to="/forgot-password">Forgot-password?</Link>
+        </Flex>
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" block>
             Login
           </Button>
         </Form.Item>
       </Form>
-      <p className="text-info">
-        Don't have account <Link to="/sign-up">Sign Up</Link>
+      <p className="auth-text">
+        Don't have account? <Link to="/sign-up">Sign Up</Link>
       </p>
     </div>
   )

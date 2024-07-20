@@ -8,8 +8,8 @@ type FieldType = {
 }
 function SignUp() {
   return (
-    <>
-      <h2 className="form-heading">Welcome to CodeFusion</h2>
+    <div className="auth-form">
+      <h2 className="form-heading">Sign Up</h2>
       <Form
         layout="vertical"
         name="SignUpForm"
@@ -32,15 +32,15 @@ function SignUp() {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" block>
             SignUp
           </Button>
         </Form.Item>
       </Form>
-      <p className="text-info">
-        Already have account <Link to="/sign-up">Log In</Link>
+      <p className="auth-text">
+        Already have account? <Link to="/sign-up">Log In</Link>
       </p>
-    </>
+    </div>
   )
 }
 
