@@ -149,15 +149,7 @@ ${Object.values(utilityClasses)
   .replaceAll(' ', '')
   .replaceAll('\n', '')}
 
-// Remove these styles before starting your project
-#root {
-  height: 100vh;
-  padding-top: 80px;
-  display: grid;
-  place-content: center;
-  place-items: center;
-  gap: 1rem;
-}
+
 `
 
 export default GlobalStyle

@@ -7,6 +7,9 @@ import NotFound from './pages/NotFound'
 import Layout from './components/layout/default'
 import GlobalStyle from './config/global.style'
 import AuthLayout from './components/layout/auth'
+import LogIn from './pages/Login'
+import SignUp from './pages/SignUp'
+import ForgotPassword from './pages/ForgotPassword'
 
 function App() {
   const router = createBrowserRouter([
@@ -27,20 +30,20 @@ function App() {
         }
       ]
     },
-    // {
-    //   element: <AuthLayout />,
-    //   children: [
-    //     { path: '/sign-in', index: true, element: <SignIn /> },
-    //     {
-    //       path: '/sign-up',
-    //       element: <SignUp />
-    //     },
-    //     {
-    //       path: '/forgot-password',
-    //       element: <ForgotPassword />
-    //     }
-    //   ]
-    // },
+    {
+      element: <AuthLayout />,
+      children: [
+        { path: '/log-in', index: true, element: <LogIn /> },
+        {
+          path: '/sign-up',
+          element: <SignUp />
+        },
+        {
+          path: '/forgot-password',
+          element: <ForgotPassword />
+        }
+      ]
+    },
     {
       path: '/',
       index: true,
