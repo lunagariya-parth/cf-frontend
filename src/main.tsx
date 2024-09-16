@@ -6,12 +6,15 @@ import { store } from './store'
 import App from './App'
 import ErrorBoundary from './pages/ErrorBoundary'
 import './utils/i18'
+import { AuthProvider } from './context/AuthContext'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ErrorBoundary>
       <Provider store={store}>
-        <App />
+        <AuthProvider>
+          <App />
+        </AuthProvider>
       </Provider>
     </ErrorBoundary>
   </React.StrictMode>

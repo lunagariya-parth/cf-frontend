@@ -23,24 +23,24 @@ function App() {
         {
           path: '/about',
           element: <About />
-        },
-        {
-          path: '*',
-          element: <NotFound />
         }
       ]
     },
     {
       element: <AuthLayout />,
       children: [
-        { path: '/log-in', index: true, element: <LogIn /> },
+        { path: '/login', index: true, element: <LogIn /> },
         {
-          path: '/sign-up',
+          path: '/signup',
           element: <SignUp />
         },
         {
           path: '/forgot-password',
           element: <ForgotPassword />
+        },
+        {
+          path: '*',
+          element: <NotFound />
         }
       ]
     },
